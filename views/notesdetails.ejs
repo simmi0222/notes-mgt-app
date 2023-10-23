@@ -1,0 +1,41 @@
+<%- include('partials/header')%>
+<%- include('partials/nav')%>
+
+
+    <div class="container"  style="margin-top: 7vmax;margin-left: 14vmax;">
+        <h1  style="margin-left: 27vmax;">Notes details</h1>
+        <form  class=" w-75 container"  action="/notesdetails/<%=noteone._id%>/update" method="post">
+       
+        
+            <input
+            class="form-control mb-3"
+            type="text"
+            placeholder="title"
+            name="title"
+            value="<%=noteone.title%>"
+            style="width: 50vw;height: 5vh;"
+        />
+        
+
+        <!-- <input
+        name="description"
+        placeholder="enter text here..."
+        class="form-control"
+        value="<%=noteone.description%>"
+     style="width: 50vw;height: 50vh;text-align: start;"/> -->
+
+     <textarea 
+     name="description"
+     placeholder="enter text here..."
+     class="form-control"
+  style="width: 50vw;height: 50vh;text-align: start;"><%=noteone.description%></textarea>
+       
+        <button class="mt-3 fs-4 btn btn-primary w-25" style="margin-left: 15vmax;padding: .5vmax 2vmax;background-color: #993A7E;border-radius: 5vmax;padding: 1vmax 2vmax;border: none;">Update</button>
+        </form>
+
+        <form action="/notesdetails/<%=noteone._id%>/delete" method="post">
+            <button class="fs-4" style="margin-left: 52vmax;margin-top: -4.5vmax;position: absolute;padding: .5vmax 2vmax;border-radius: 5px;background-color: red;border: none;font-size: 1.2vmax;background-color: #905680;border-radius: 5vmax;padding: 1vmax 2vmax;border: none;color: white;">Delete</button>
+        </form>
+    </div>
+    <%- include('partials/footer')%>
+ 

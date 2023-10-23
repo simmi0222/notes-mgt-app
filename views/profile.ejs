@@ -1,0 +1,80 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+<div class="d-flex">
+
+<div id="profile-l" class="d-flex">
+
+    <div class="p-l-box d-flex flex-column ms-5" style="margin-top: 5vmax;">
+        <h1 class="mt-5" style="color: black;font-weight: bolder;">Account</h1>
+        <div class="p-l-links d-flex flex-column mt-3 mt-3 fs-2 gap-5">
+        <a href="/home"><i class="fa-solid fa-user mt-3 fs-2 "></i>  Home</a>
+        <a href="/mynotes"><i class="fa-solid fa-user mt-3 fs-2 "></i>  My Notes</a>
+        <a href="/profile"><i class="fa-solid fa-book mt-3 fs-2 "></i>  My Profile</a>
+        <!-- <a href="/notification"><i class="fa-solid fa-bell mt-3 fs-2 "></i>  Notification</a> -->
+        
+        <a href="/settings"><i class="fa-solid fa-gear mt-3 fs-2 "></i>  Settings</a>
+        <a href="/sign-out" class="ms-4"> Sign Out</a>
+    </div>
+    </div>
+</div>
+
+
+<div id="profile-r" class="d-flex flex-column"  style="margin-top: 7vmax;">
+    <div class="container  w-50" style="background-color: #b17c98;border: 2px solid purple;">
+        
+
+        <div id="profile-top">
+            <h4 class="text-center mt-2 fw-bold">Edit Photo</h4>
+            <img
+            height="100"
+            width="100"
+            style="object-fit: cover;margin-left: 15vmax;;"
+            class="rounded-circle me-5"
+            src="/images/<%= user.avatar %>"  
+            alt=""
+        />
+        <form action="/avatar" method="post" enctype="multipart/form-data" class="container mt-3 w-50" >
+            <input class="form-control mb-3" style="border: 2px solid black;" type="file" name="avatar" />
+            <button class="btn" style="margin-left: 4vmax;background-color:  #993A7E;color: black;font-weight: 700;border-radius: 20px;">Upload Image</button>
+        </form>
+        </div>
+
+        <hr style="border: 3px solid rgb(0, 0, 0);">
+                
+        <div id="profile-between w-50">
+            
+            <form action="/updateUser" method="post">
+                <h4 class="text-center fw-bold">Edit Details</h4>
+                <input
+                class="form-control mb-3"
+                type="text"
+                placeholder="enter name"
+                name="username"
+                value="<%=user.username%>"
+                style="border: 2px solid black"
+            />
+
+            <input
+            class="form-control mb-3"
+            type="text"
+            placeholder="enter email"
+            name="email"
+            value="<%=user.email%>"
+            style="border: 2px solid black;"
+        />
+
+      <button style="text-align: center;border: none;margin-left: 15vmax;background-color:  #993A7E;color: black;font-weight: 700;border: none;color: black;border-radius: 100px;"><a style="padding: .7vmax 2vmax;color: black;font-weight: 700;" class="btn text-decoration-none" href="/updateUser">Edit</a></button> 
+            </form>
+        </div>
+
+        <hr style="border: 3px solid rgb(0, 0, 0);">
+
+        <div class="text-center" style="padding-bottom: 2vmax;margin-top: 3vmax;">
+            <button style="text-align: center;border: none;margin-left: 1vmax;background-color:  #993A7E;color: black;font-weight: 700;border: none;color: black;border-radius: 20px;"><a class="text-decoration-none btn " style="color: black;font-weight: 700;" href="/reset/<%=user._id%>">Reset Password</a></button>
+        </div>
+
+    </div>
+</div>
+
+<%- include("partials/footer")%>

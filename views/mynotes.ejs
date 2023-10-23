@@ -1,0 +1,61 @@
+<%- include('partials/header')%>
+<!--  -->
+<%- include('partials/nav')%>
+
+  <div class="d-flex" >
+
+    <div id="mynotes-l" class=" d-flex">
+    
+        <div class="p-l-box d-flex flex-column ms-5" style="margin-top: 6vmax;">
+            <h1 class="mt-5" style="color: black;font-weight: bolder;">Account</h1>
+            <div class="p-l-links d-flex flex-column mt-3 mt-3 fs-2 gap-5">
+            <a href="/home" style="text-decoration: none;"><i class="fa-solid fa-home mt-4 fs-2  "  ></i>  Home</a>
+            <a href="/mynotes" style="text-decoration: none;"><i class="fa-solid fa-user mt-4 fs-2  "  ></i>  My Notes</a>
+            <a href="/profile" style="text-decoration: none;"><i class="fa-solid fa-book mt-4 fs-2  "></i>  My Profile</a>
+            <!-- <a href="/notification"><i class="fa-solid fa-bell mt-3 fs-2 "></i>  Notification</a> -->
+            
+            <a href="/settings" style="text-decoration: none;"><i class="fa-solid fa-gear mt-4 fs-2 " ></i>  Settings</a>
+            <a href="/sign-out" class="ms-4" style="text-decoration: none;"> Sign Out</a>
+        </div>
+      
+    </div>
+    
+    <div id="mynotes-r" class=" d-flex flex-column mb-5">
+
+      <div class="d-flex justify-content-between">
+      <h1 class=" mt-5" style="margin-left: 25vmax;">All Notes! </h1> 
+      <a style="color:  #993A7E;" href="/createtask"><h2 class="me-5" style="margin-top: 3.5vmax;color: #993A7E">Create One!</h2></a>
+    </div>
+
+
+      <div class="d-flex gap-5  flex-wrap" style="margin-top: 5vmax;margin-left: 7vmax;">
+        <% tasks.forEach((task)=>{%>
+          <a href="/notesdetails/<%=task._id%>" style="text-decoration: none;">
+          
+          <div class="card" style="width: 20vw;height: 40vh;overflow-y: hidden;overflow-x: hidden;box-shadow: 0px 0px 5px rgb(50, 48, 48);">
+          
+              
+              <div class="card-body">
+                  
+                <h2 class="card-title" style="font-weight: 700;color: black;"> <%=task.title%></h2>
+                <hr>
+                <h2 class="card-text" style="font-weight: 500;color: rgb(87, 81, 81);"><%=task.description%></</h2>
+                
+                <!-- <a href="/updateTask/<%=task._id%>" class="btn btn-primary">✏️</a> -->
+             
+             
+              </div>
+         
+            </div>
+          </a>
+         <% })%>
+      
+      </div>
+    
+    
+    
+    </div>
+    
+
+    <%- include('partials/footer')%>
+ 

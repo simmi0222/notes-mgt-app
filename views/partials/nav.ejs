@@ -1,0 +1,34 @@
+
+<nav class="w-100 d-flex justify-content-between">
+    <div class="nav-l ms-5">
+      <% if(!user) {%>
+     
+      <h1 style="font-weight: 600;margin-left: 2vmax;">Notes App <img style="width: 50px;height: 50px;" src="https://img.icons8.com/?size=80&id=geOEfcAL6Z7i&format=png" alt=""></h1>
+
+      <% } else{%>
+
+<h1 style="font-weight: 600;margin-left: 40vmax;">Notes App <img style="width: 50px;height: 50px;" src="https://img.icons8.com/?size=80&id=geOEfcAL6Z7i&format=png" alt=""></h1>
+      <%}%>
+  </div>
+  
+  <div class="nav-r me-5">
+  <ul class="d-flex list-unstyled gap-5">
+
+    <!-- <li><a class="text-decoration-none fs-3 text-dark" href="<%=user? '/home' : '/'%>">Home</a></li> -->
+    <!-- <li><a class="text-decoration-none fs-3 text-dark" href="<%=user? '/home' : '/'%>">Home</a></li> -->
+
+   <% if(!user) {%>
+    
+    <li><a class="text-decoration-none fs-3 text-dark" href="<%=user? '/home' : '/'%>">Home</a></li>
+    <li><a class="text-decoration-none fs-3 text-dark" href="/sign-in">Sign In</a></li>
+    <li><a class="text-decoration-none fs-3 text-dark" href="/sign-up">Sign Up</a></li>
+
+  <% } else{%>
+    <!-- <h1 style="font-weight: 600;">Notes App📝</h1> -->
+    <!-- <li><a class="text-decoration-none fs-3 text-dark" href="/sign-out">Sign Out</a></li> -->
+
+    <%}%>
+  </ul>
+  </div>
+  
+  </nav>

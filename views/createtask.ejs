@@ -1,0 +1,23 @@
+<%- include('partials/header')%>
+<!--  -->
+<%- include('partials/nav')%>
+<div class="container" style="margin-top: 7vmax;margin-left: 12vmax;">
+<form class="m-auto container w-75 mt-5" action="/createtask" method="post">
+    <h1 class="mb-4" style="margin-left: 13vmax;;">Create Task Page</h1>
+    <input
+        class="form-control mb-3"
+        type="text"
+        placeholder="title"
+        name="title"
+        style="width: 50vw;height: 5vh;"
+    />
+    <textarea
+        name="description"
+        placeholder="enter text here..."
+        class="form-control"
+     style="width: 50vw;height: 50vh;"></textarea>
+    <button class="mt-3 fs-3 btn btn-primary w-25" style="margin-left: 17vmax;background-color: #993A7E;border-radius: 5vmax;padding: 1vmax 2vmax;border: none;">Create</button>
+    <p style="margin-left: 12vmax;margin-top: 1.5vmax;font-size: 1.5vmax;font-weight: 600;">Want to go to homepage? <a style="color: blueviolet;" href="/home">Home</a></p>
+</form>
+</div>
+<%- include('partials/footer')%>

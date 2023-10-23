@@ -1,0 +1,43 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+
+<div class="d-flex">
+
+<div class="h-l d-flex">
+
+    <div class="p-l-box d-flex flex-column ms-5" style="margin-top: 5vmax;">
+        <h1 class="mt-5" style="color: black;font-weight: bolder;">Account</h1>
+        <div class="p-l-links d-flex flex-column mt-3 mt-3 fs-2 gap-5">
+       <a  href="/home"><i class=" fa-solid fa-user mt-3 fs-2 "></i>  Home</a>
+        <a href="/mynotes"><i class="fa-solid fa-user mt-3 fs-2 "></i>  My Notes</a>
+       <a href="/profile" class="me-3"><i class="fa-solid fa-book mt-3 fs-2  "></i>  My Profile</a>
+        <!-- <a href="/notification"><i class="fa-solid fa-bell mt-3 fs-2 "></i>  Notification</a> -->
+        
+        <a href="/settings"><i class="fa-solid fa-gear mt-3 fs-2 "></i>  Settings</a>
+       <a href="/sign-out" class="ms-4"> Sign Out</a>
+    </div>
+    </div>
+</div>
+
+<div class="h-r d-flex flex-column">
+<div class="d-flex justify-content-end">
+    <h1 class="fs-2 me-5 fw-bold" style="margin-top: 5vmax;margin-top: 5vmax;">Hey, <%=user.username%>.</h1>
+
+</div>
+
+<div class="d-flex justify-content-between">
+   <div>
+    <h2 class="mt-5 ms-5" style="font-size: 2vmax;">Let's start with your first note! </h2>
+    <h3 class="ms-5 mt-5 text-center"> <a style="color: blueviolet;font-weight: 600;" href="/createtask">Create One</a></h3>
+</div>
+
+    <img style="width: 50%;height: 90%;" class="mt-3" src="/images/notes-home-img.png" alt="">
+</div>
+
+</div>
+
+
+
+</div>
+
+<%- include("partials/footer")%>

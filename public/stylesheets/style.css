@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body{
+  width: 100%;
+  height: 100%;
+  font-family: "montserrat";
+  background-color: #F2D6E4;
+}
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+nav{
+  padding-top: 1vmax;
+  background-color: #cf96b4;
+  box-shadow: 0px 5px 5px #B14895;
+  font-weight: 600;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  
+  
+}
+
+.nav-l h1:hover{
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgb(68, 101, 154);
+}
+
+nav ul li a:hover{
+  cursor: pointer;
+  text-shadow: 1px 1px 2px rgb(68, 101, 154);
+}
+
+
+
+#home-btn{
+  background-color: #774E88;
+  box-shadow: 0px 0px 20px #674E88;
+}
+
+#home-btn:hover{
+  background-color: #AD4695;
+  /* box-shadow: 0px 0px 20px #767698; */
+  border-radius: 5vmax;
+}
+
+input:hover{
+  box-shadow: 2px 2px 5px #774E88;
+}
+
+.h-l{
+  width: 20vw;
+  height: 100vh;
+  background-color: #d5b1d2;
+  position: fixed;
+  /* margin-top: 5vmax; */
+}
+
+.h-r{
+  width: 80vw;
+  height: 100vh;
+  /* background-color: rgb(144, 113, 113); */
+  margin-top: 5vmax;
+  position: absolute;
+  margin-left: 20vw;
+ 
+}
+
+#mynotes-l{
+  width: 20vw;
+  height: 100vh;
+  background-color: #d5b1d2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* margin-top: 5vmax; */
+
+}
+
+#mynotes-r{
+  width: 80vw;
+  max-height: 100%;
+  /* background-color: rgb(144, 113, 113); */
+  margin-top: 5vmax;
+  position: absolute;
+  overflow-y: scroll;
+  margin-left: 20vw;
+ /* margin-bottom: 2vmax; */
+ padding-bottom: 7vmax;
+}
+
+#profile-l{
+  width: 20vw;
+  height: 100vh;
+  background-color: #d5b1d2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* margin-top: 5vmax; */
+
+}
+
+#profile-r{
+  width: 80vw;
+  max-height: 100%;
+  /* background-color: rgb(144, 113, 113); */
+  margin-top: 5vmax;
+  position: absolute;
+  overflow-y: scroll;
+  margin-left: 20vw;
+ /* margin-bottom: 2vmax; */
+ padding-bottom: 5vmax;
+}
+
+.p-l-links a,i{
+  color: black;
+  font-size: 2vmax;
+  font-weight: bolder;
+}
+
+.p-l-links a{
+  text-decoration: none;
+}
+
+.active{
+  color: white;
+  background-color: #774E88;
+  /* text-decoration: underline; */
+  border-radius: 50px;
+  
+  
+}

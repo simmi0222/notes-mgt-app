@@ -1,0 +1,14 @@
+<%- include("partials/header")%>
+<%- include("partials/nav")%>
+<div style="margin-top: 11vmax;">
+<form class="form-control w-25 container mt-5" action="/sign-up" method="post" style="background-color: #b17c98;border: 2px solid rgb(128, 47, 125);box-shadow: 2px 2px 0px  rgb(59, 56, 59);">
+    <h1 class="text-center">Sign Up Page</h1>
+    <input style="border: 2px solid rgb(93, 45, 81);" class=" fs-3 mt-3 border-4 text-dark" type="text" name="username" placeholder="enter your name">
+    <input style="border: 2px solid rgb(93, 45, 81);;" class=" fs-3 mt-3 border-4 text-dark" type="email" name="email" placeholder="enter your email">
+    <input style="border: 2px solid rgb(93, 45, 81);;" class=" fs-3 mt-3 border-4 text-dark" type="password" name="password" placeholder="*******">
+    <button style="margin-left: 6vmax; background-color: #993A7E;border-radius: 5vmax;padding: 0 2vmax;" class="mt-4 btn fs-3 fw-bold">Sign-up</button>
+    <p style="margin-left: 1.5vmax;font-size: 1.2vmax;" class="mt-3 fw-bold">Already have an account? <a href="/sign-in" style="color: #522b69;">Sign-in</a></p>
+
+</form>
+</div>
+<%- include("partials/footer")%>
